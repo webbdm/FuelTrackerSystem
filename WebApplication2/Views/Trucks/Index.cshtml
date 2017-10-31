@@ -1,0 +1,57 @@
+﻿@model IEnumerable<WebApplication2.Models.Truck>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CurrentStop)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NextStop)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DriverId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CurrentFuel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Region)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CurrentStop)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NextStop)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DriverId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CurrentFuel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Region)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TruckID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TruckID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TruckID })
+        </td>
+    </tr>
+}
+
+</table>

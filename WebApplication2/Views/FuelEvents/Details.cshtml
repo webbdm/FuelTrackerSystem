@@ -1,0 +1,50 @@
+﻿@model WebApplication2.Models.FuelEvent
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FuelEvent</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FuelUsed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FuelUsed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Truck)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Truck)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Order)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Order)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EventID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
